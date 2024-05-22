@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes,Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes,Navigate,Outlet } from 'react-router-dom';
 import MyNav from "./components/MyNav";
 import Home from './components/Home';
 import Gallery from './components/Gallery';
@@ -169,6 +169,7 @@ function App() {
         <Route path="/home" element={<Home Image={Image}/>}/>
         <Route path="/gallery" element={<Gallery image={image} video={video}/>}/>
       </Routes>
+      <Outlet/>
     </>
     </Router>
   )
