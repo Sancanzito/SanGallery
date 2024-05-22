@@ -161,7 +161,7 @@ function App() {
 
 
   return (
-    <Router>  {/* Wrap the application with Router */}
+    <Router  basename={import.meta.env.DEV ? '/' : '/SanGallery/'}>  {/* Wrap the application with Router */}
     <>
     <MyNav/>
       <Routes>
