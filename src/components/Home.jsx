@@ -16,8 +16,7 @@ const Home = ({Image}) => {
                 <Card.Img variant='top' src={Image[currentImage]} className="img-thumbnail"/>
                 <Card.Body className="bg-info">
                     <Card.Text>
-                        Welcome to this page! This page is only dedicated for fun and personal purposes only!
-                        I hope you enjoy the short animations of this page.
+                        Welcome to this page! I hope you enjoy seeing this page!
                     </Card.Text>
                 </Card.Body>
             </Card>

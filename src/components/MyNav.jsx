@@ -18,13 +18,16 @@ const MyNav = () => {
       <Container fluid>
       <Nav className="d-flex align-items-center">
           <Nav.Item>
-            <Link to="/home" className="navbar-brand mb-0 h1">Sensanitty</Link>
+            <Link to="/home" className="navbar-brand mb-0 h1">Journal</Link>
           </Nav.Item>
           <Nav.Item>
             <Link to="/home" className="nav-link">Home</Link>
           </Nav.Item>
           <Nav.Item>
             <Link to="/gallery" className="nav-link">Gallery</Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Link to='/message' className="nav-link">Msg</Link>
           </Nav.Item>
         </Nav>
         <Nav className="ms-auto">

@@ -147,6 +147,7 @@ import r98 from "./assets/asset/r98.jpeg"
 import r99 from "./assets/asset/r99.jpeg"
 import chacha from"./assets/asset/chacha.mp4";
 import speech from"./assets/asset/speech.mp4";
+import Message from './components/Message';
 
 
 function App() {
@@ -168,6 +169,7 @@ function App() {
       <Route path="/" element={<Navigate to="/home" />} />  
         <Route path="/home" element={<Home Image={Image}/>}/>
         <Route path="/gallery" element={<Gallery image={image} video={video}/>}/>
+        <Route path='/message' element={<Message/>}/>
       </Routes>
       <Outlet/>
     </>
