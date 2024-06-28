@@ -2,6 +2,7 @@ import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import moment from "moment";
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useState,useEffect } from "react";
 const MyNav = () => {
 
@@ -17,18 +18,33 @@ const MyNav = () => {
       <Nav variant="tabs" defaultActiveKey="/home" className="navbar navbar-expand-lg">
       <Container fluid>
       <Nav className="d-flex align-items-center">
-          <Nav.Item>
+      <Nav.Item>
             <Link to="/home" className="navbar-brand mb-0 h1">Journal</Link>
           </Nav.Item>
-          <Nav.Item>
+      <NavDropdown title="main" id="basic-nav-dropdown">
+          <NavDropdown.Item>
             <Link to="/home" className="nav-link">Home</Link>
-          </Nav.Item>
-          <Nav.Item>
+          </NavDropdown.Item>
+          <NavDropdown.Item>
             <Link to="/gallery" className="nav-link">Gallery</Link>
-          </Nav.Item>
-          <Nav.Item>
+          </NavDropdown.Item>
+          <NavDropdown.Item>
             <Link to='/message' className="nav-link">Msg</Link>
-          </Nav.Item>
+          </NavDropdown.Item>
+      </NavDropdown>
+
+          <NavDropdown title="CQuestions" id="basic-nav-dropdown">
+            <NavDropdown.Item>
+            <Link to='/Questionlist' className="nav-link">QuestionList</Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+            <Link to='/AddQuestion' className="nav-link">AddQuestion</Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link to='/Test' className="nav-link">Test</Link>
+            </NavDropdown.Item>
+            </NavDropdown>
+
         </Nav>
         <Nav className="ms-auto">
           <Nav.Item className="d-none d-md-block">

@@ -148,7 +148,10 @@ import r99 from "./assets/asset/r99.jpeg"
 import chacha from"./assets/asset/chacha.mp4";
 import speech from"./assets/asset/speech.mp4";
 import Message from './components/Message';
-
+import AddQuestion from './components/AddQuestion';
+import Test from './components/Test';
+import QuestionList from './components/Questionlist';
+import { useState } from 'react';
 
 function App() {
   const Image=[nI,nII,nIII,nIV,nV];
@@ -160,7 +163,15 @@ function App() {
     r80,r81,r82,r83,r84,r85,r86,r87,r88,r89,r90,r91,r92,r93,r94,r95,r96,r97,r98,r99];
     const video=[chacha,speech];
 
+    const [questions, setQuestions] = useState([]);
 
+  const addQuestion = (question) => {
+    setQuestions([...questions, question]);
+  };
+
+  const deleteQuestion = (index) => {
+    setQuestions(questions.filter((_, i) => i !== index));
+  };
   return (
     <Router  basename={import.meta.env.DEV ? '/' : '/SanGallery/'}>  {/* Wrap the application with Router */}
     <>
@@ -170,6 +181,9 @@ function App() {
         <Route path="/home" element={<Home Image={Image}/>}/>
         <Route path="/gallery" element={<Gallery image={image} video={video}/>}/>
         <Route path='/message' element={<Message/>}/>
+        <Route path='/AddQuestion' element={<AddQuestion addQuestion={addQuestion} />}/>
+        <Route path='/Questionlist' element={<QuestionList questions={questions} deleteQuestion={deleteQuestion} />}/>
+        <Route path='/Test' element={<Test questions={questions} />}/>
       </Routes>
       <Outlet/>
     </>
